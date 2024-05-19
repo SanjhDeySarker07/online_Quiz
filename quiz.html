@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .quiz-container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .quiz-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Online Quiz</h1>
+        <form class="quiz-form">
+            <div class="quiz-question">
+                <p>1. What is the capital of France?</p>
+                <label>
+                    <input type="radio" name="question1" value="Paris">
+                    Paris
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="London">
+                    London
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="Rome">
+                    Rome
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="Berlin">
+                    Berlin
+                </label>
+            </div>
+            <div class="quiz-question">
+                <p>2. Which planet is known as the Red Planet?</p>
+                <label>
+                    <input type="radio" name="question2" value="Earth">
+                    Earth
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Mars">
+                    Mars
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Jupiter">
+                    Jupiter
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Venus">
+                    Venus
+                </label>
+            </div>
+            <div class="quiz-question">
+                <p>3. Who wrote "Hamlet"?</p>
+                <label>
+                    <input type="radio" name="question3" value="Charles Dickens">
+                    Charles Dickens
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="William Shakespeare">
+                    William Shakespeare
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="Mark Twain">
+                    Mark Twain
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="Jane Austen">
+                    Jane Austen
+                </label>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

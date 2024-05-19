@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container, .quiz-container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            display: none;
+        }
+
+        .login-container.active, .quiz-container.active {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .quiz-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container active" id="login-container">
+        <h1>Student Login</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+
+    <div class="quiz-container" id="quiz-container">
+        <h1>Online Quiz</h1>
+        <form class="quiz-form">
+            <div class="quiz-question">
+                <p>1. What is the capital of France?</p>
+                <label>
+                    <input type="radio" name="question1" value="Paris">
+                    Paris
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="London">
+                    London
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="Rome">
+                    Rome
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="Berlin">
+                    Berlin
+                </label>
+            </div>
+            <div class="quiz-question">
+                <p>2. Which planet is known as the Red Planet?</p>
+                <label>
+                    <input type="radio" name="question2" value="Earth">
+                    Earth
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Mars">
+                    Mars
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Jupiter">
+                    Jupiter
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="Venus">
+                    Venus
+                </label>
+            </div>
+            <div class="quiz-question">
+                <p>3. Who wrote "Hamlet"?</p>
+                <label>
+                    <input type="radio" name="question3" value="Charles Dickens">
+                    Charles Dickens
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="William Shakespeare">
+                    William Shakespeare
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="Mark Twain">
+                    Mark Twain
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="Jane Austen">
+                    Jane Austen
+                </label>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('login-container').classList.remove('active');
+            document.getElementById('quiz-container').classList.add('active');
+        });
+    </script>
+</body>
+</html>
